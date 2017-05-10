@@ -26,6 +26,9 @@ const log = {
 
 module.exports = {
 
+    googleTimeApiKey: process.env.GOOGLE_TIME_API_KEY,
+    googleGeoApiKey: process.env.GOOGLE_GEO_API_KEY,
+
     log: (env) => {
         if(env) return log[env]();
         return log[process.env.NODE_ENV || 'development']()
